@@ -1,0 +1,241 @@
+* {
+	background-color: #7c7c83;
+}
+main {
+    background: white;
+    width: 100%;
+    margin: 1em;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "word word word word"
+        "menu canvas canvas stats"
+        ". alphabet alphabet .";
+    
+    bottom: 0;
+    justify-content: center;
+}
+
+#word {
+    
+    height:30%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: word;
+}
+
+#wholeWord li {
+    list-style:none;
+    float:left;
+    margin: 0 0.3em 0.3em 0;
+    width:1.2em;
+    height:1.2em;
+    padding: 0.5em;
+    background:white;
+    border: solid 1px black;
+    font-family:'Trebuchet MS';
+    text-transform: uppercase;
+    border-radius: 1.2em;
+    font-size: 2em;
+    text-align: center;
+   
+}
+
+canvas {
+    color: black;
+    padding: 2em;
+    height: 20rem;
+    width: fit-content;
+    justify-content: center;
+    grid-area: canvas;
+    position: relative;
+}
+
+#allLetters li {
+    list-style:none;
+    float:left;
+    margin: 0 0.3em 0.3em 0;
+    width:1.2em;
+    height:1.2em;
+    padding: 0.5em;
+    background:white;
+    cursor:pointer;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em; 
+}
+
+#allLetters li:hover{
+    opacity:0.2;  
+}
+
+.btnPressed {
+    background: chartreuse;
+}
+
+#alphabet {
+    bottom: 0;
+    grid-area: alphabet;
+    justify-content: center;
+}
+
+#singleLetter {
+    margin: 0;
+    padding: 0px;
+    bottom: 0;
+}
+
+
+#play {
+    position: absolute;
+    width: 20em;
+    top: 50%;
+    left:35%;
+    height: 2em;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: white;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    margin-top: 0;
+}
+
+#playAgain {
+    cursor: pointer;
+    font-size: 2em;
+    background-color: white;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    width: 60%;
+    margin-top: 0.5em;
+}
+
+#hintBtn {
+    cursor: pointer;
+    font-size: 2em;
+    background-color: white;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    width: 60%;
+    margin-top: 0.5em;
+}
+
+#leaderboard {
+    cursor: pointer;
+    font-size: 1.7em;
+    background-color: white;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    width: 60%;
+    margin-top: 0.3em;
+}
+
+#stats {
+    grid-area: stats;
+    font-family: 'Trebuchet MS';
+    font-size: 2em;
+    left: 0;
+    position: relative;
+    margin:1em;
+}
+
+#highScore {
+    grid-area: stats;
+    font-family: 'Trebuchet MS';
+    font-size: 1em;
+    left: 0;
+    position: absolute;
+    color: #FF0800;
+}
+
+#score {
+    grid-area: stats;
+    font-family: 'Trebuchet MS';
+    font-size: 1em;
+    left: 0;
+    position: absolute;
+    margin-top: 3em;
+}
+
+
+#menu {
+    grid-area: menu;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5em;
+
+}
+
+#winWindow {
+    position: absolute;
+    background: white;
+    width: 30em;
+    height: 15em;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    white-space: pre-line;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    border: solid 1px black;
+    font-size: 12;
+    padding-top: 1em;
+}
+
+#winBg {
+    position: absolute;
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.5;
+}
+
+#heading {
+    font-size: 25;
+    color: green;
+}
+
+.winButtons {
+    position: relative;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: white;
+    border: solid 1px black;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    padding: 0.5em;
+    margin-left: 12px;
+}
+
+input {
+    width: 60%;
+    padding: 0.5em 0.7em;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#startinfo {
+    position: absolute;
+    font-size: 3em;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+}
